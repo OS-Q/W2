@@ -1,9 +1,5 @@
-/*
-chacha-merged.c version 20080118
-D. J. Bernstein
-Public domain.
-*/
 
+#include <stddef.h>
 #include "ecrypt-sync.h"
 #include "ecrypt-portable.h"
 
