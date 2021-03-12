@@ -1,20 +1,14 @@
-﻿# [加密单元](https://github.com/OS-Q/W11)
+﻿# [T21D](https://github.com/OS-Q/T21D)
 
-[![sites](http://182.61.61.133/link/resources/OSQ.png)](http://www.OS-Q.com)
+[![Build Status](https://github.com/OS-Q/T21D/workflows/macos/badge.svg)](https://github.com/OS-Q/T21D/actions/workflows/macos.yml)
+[![Build Status](https://github.com/OS-Q/T21D/workflows/ubuntu/badge.svg)](https://github.com/OS-Q/T21D/actions/workflows/ubuntu.yml)
+[![Build Status](https://github.com/OS-Q/T21D/workflows/windows/badge.svg)](https://github.com/OS-Q/T21D/actions/workflows/windows.yml)
+[![Build Status](https://github.com/OS-Q/T21D/workflows/PlatformIO/badge.svg)](https://github.com/OS-Q/T21D/actions/workflows/platformio.yml)
+[![Build Status](https://travis-ci.com/OS-Q/T21D.svg?branch=master)](https://travis-ci.com/OS-Q/T21D)
+[![Build status](https://ci.appveyor.com/api/projects/status/3n82nq856e58o89g?svg=true)](https://ci.appveyor.com/project/Qitas/T21D)
 
-* Q[4] - M[12] - W[52] - D[365] - H[24] - N[60] - S[60]
+### [简介](https://github.com/OS-Q/T21D/wiki)
 
-### [workspace描述](https://github.com/OS-Q/W11/wiki)
+[T21D](https://github.com/OS-Q/T21D)
 
-[加密单元](https://github.com/OS-Q/W11)基于数字货币钱包进行加密校验。
-
-### [开放资源](https://github.com/OS-Q/)
-
-* [文档](docs/)
-* [工程](project/)
-
-### [相关硬件](https://github.com/SoCXin)
-
-* [STM32F427](https://github.com/SoCXin/STM32F427)
-
-### [OS-Q = Open Solutions | Open Source | Operating System ](http://www.OS-Q.com/W11)
+### [源圈 OS-Q (Open Source & QA) ](http://www.OS-Q.com)
