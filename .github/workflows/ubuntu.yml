@@ -1,0 +1,49 @@
+name: ubuntu
+
+on:
+  push:
+    branches:
+      - master
+      - github_actions
+    tags:
+      - '*'
+  pull_request:
+    branches:
+      - master
+      - github_actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.7]
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: "recursive"
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install
+        run: |
+          pip install --upgrade pip wheel setuptools
+          pip install poetry
+          poetry install
+          curl -LO "https://github.com/google/protobuf/releases/download/v${PROTOBUF_VERSION}/protoc-${PROTOBUF_VERSION}-linux-x86_64.zip"
+          unzip "protoc-${PROTOBUF_VERSION}-linux-x86_64.zip" -d protoc
+          curl -LO "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/2.2.0/ec-linux-amd64.tar.gz"
+          tar xfz ec-linux-amd64.tar.gz && mv bin/ec-linux-amd64 bin/editorconfig-checker
+          export PATH="$(pwd)/bin:$(pwd)/protoc/bin:$PATH"
+
+      - name: Build
+        run: |
+          poetry run make style_check
+          poetry run make defs_check
+          poetry run make gen_check
+          poetry run make yaml_check
+          ci/check_fixup.sh
