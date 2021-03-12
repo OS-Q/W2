@@ -36,7 +36,6 @@ script:
   - poetry run make defs_check
   - poetry run make gen_check
   - poetry run make yaml_check
-  - ci/check_fixup.sh
 
 notifications:
   email:

@@ -1,16 +1,6 @@
-name: Checks
+name: check
 
-on:
-  push:
-    branches:
-      - master
-      - github_actions
-    tags:
-      - '*'
-  pull_request:
-    branches:
-      - master
-      - github_actions
+on: [pull_request]
 
 jobs:
   block-fixup:
